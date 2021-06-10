@@ -16,12 +16,14 @@ val quarkusPlatformVersion: String by project
 dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
 
-    implementation("io.quarkus:quarkus-rest-client-reactive")
+    implementation("io.quarkus:quarkus-rest-client")
+    implementation("io.quarkus:quarkus-rest-client-jsonb")
 
-    implementation("io.quarkus:quarkus-vertx-web")
-    implementation("io.quarkus:quarkus-rest-client-reactive-jackson")
     implementation("io.quarkus:quarkus-arc")
-    implementation("io.quarkus:quarkus-resteasy-reactive")
+    implementation("io.quarkus:quarkus-vertx-web")
+
+    // Commons
+    implementation("commons-io:commons-io:2.9.0")
 
     // Logging
     implementation("org.slf4j:slf4j-api:1.7.30")
