@@ -28,8 +28,8 @@ public class CovidDataRoutes {
 
     @Route(path = "/coviddata")
     Uni<CovidData> retrieveCovidData() {
-        Uni<VaccinationsResponse> vaccinationsResponse = Uni.createFrom().item(vaccionationsClient.getVaccinations());
-        Uni<CountryStatisticsResponse> germanStatisticsResponse = Uni.createFrom().item(statisticsClient.getStatisticsForGermany());
+        Uni<VaccinationsResponse> vaccinationsResponse = vaccionationsClient.getVaccinations();
+        Uni<CountryStatisticsResponse> germanStatisticsResponse = statisticsClient.getStatisticsForGermany();
 
         Uni<VaccinationsData> vaccinationsData = vaccinationsResponse
                 .map(VaccinationsResponse::getVaccinationsResponseData)

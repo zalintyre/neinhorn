@@ -1,37 +1,37 @@
 package de.qaware.neinhorn.coronazahlen;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import javax.json.bind.annotation.JsonbProperty;
 import java.math.BigDecimal;
 
 @Data
 public class CountryStatisticsResponse {
 
-    @JsonbProperty("cases")
+    @JsonProperty("cases")
     long cases;
 
-    @JsonbProperty("deaths")
+    @JsonProperty("deaths")
     long deaths;
 
-    @JsonbProperty("recovered")
+    @JsonProperty("recovered")
     long recovered;
 
-    @JsonbProperty("weekIncidence")
+    @JsonProperty("weekIncidence")
     BigDecimal weekIncidence;
 
-    @JsonbProperty("casesPer100k")
+    @JsonProperty("casesPer100k")
     BigDecimal casesPer100k;
 
-    @JsonbProperty("casesPerWeek")
+    @JsonProperty("casesPerWeek")
     long casesPerWeek;
 
-    @JsonbProperty("delta")
+    @JsonProperty("delta")
     Delta delta;
 
-    @JsonbProperty("r")
+    @JsonProperty("r")
     RValue r;
 
-    @JsonbProperty("meta")
+    @JsonProperty("meta")
     MetaInfo metaInfo;
 }

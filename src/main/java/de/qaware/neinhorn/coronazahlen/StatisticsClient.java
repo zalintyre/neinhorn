@@ -1,5 +1,6 @@
 package de.qaware.neinhorn.coronazahlen;
 
+import io.smallrye.mutiny.Uni;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.ws.rs.GET;
@@ -12,6 +13,6 @@ public interface StatisticsClient {
 
     @GET
     @Path("/germany")
-    CountryStatisticsResponse getStatisticsForGermany();
+    Uni<CountryStatisticsResponse> getStatisticsForGermany();
 
 }

@@ -1,19 +1,19 @@
 package de.qaware.neinhorn.coronazahlen;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import javax.json.bind.annotation.JsonbDateFormat;
-import javax.json.bind.annotation.JsonbProperty;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
 public class RValue {
 
-    @JsonbProperty("value")
+    @JsonProperty("value")
     BigDecimal value;
 
-    @JsonbProperty("date")
-    @JsonbDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+    @JsonProperty("date")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     LocalDate date;
 }

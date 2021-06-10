@@ -1,18 +1,17 @@
 package de.qaware.neinhorn.coronazahlen;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-
-import javax.json.bind.annotation.JsonbProperty;
 
 @Data
 public class Delta {
 
-    @JsonbProperty("cases")
+    @JsonProperty("cases")
     long cases;
 
-    @JsonbProperty("deaths")
+    @JsonProperty("deaths")
     long deaths;
 
-    @JsonbProperty("recovered")
+    @JsonProperty("recovered")
     long recovered;
 }

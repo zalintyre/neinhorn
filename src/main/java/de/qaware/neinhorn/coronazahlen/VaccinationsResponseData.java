@@ -1,21 +1,21 @@
 package de.qaware.neinhorn.coronazahlen;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import javax.json.bind.annotation.JsonbProperty;
 import java.math.BigDecimal;
 
 @Data
 public class VaccinationsResponseData {
 
-    @JsonbProperty("administeredVaccinations")
+    @JsonProperty("administeredVaccinations")
     long administeredVaccinations;
 
-    @JsonbProperty("vaccinated")
+    @JsonProperty("vaccinated")
     long vaccinated;
 
-    @JsonbProperty("quote")
+    @JsonProperty("quote")
     BigDecimal quote;
 
 }

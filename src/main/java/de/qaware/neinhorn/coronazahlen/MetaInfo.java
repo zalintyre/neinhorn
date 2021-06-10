@@ -1,28 +1,28 @@
 package de.qaware.neinhorn.coronazahlen;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import javax.json.bind.annotation.JsonbDateFormat;
-import javax.json.bind.annotation.JsonbProperty;
 import java.time.LocalDate;
 
 @Data
 public class MetaInfo {
 
-    @JsonbProperty("source")
+    @JsonProperty("source")
     String source;
 
-    @JsonbProperty("contact")
+    @JsonProperty("contact")
     String contact;
 
-    @JsonbProperty("info")
+    @JsonProperty("info")
     String info;
 
-    @JsonbProperty("lastUpdate")
-    @JsonbDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+    @JsonProperty("lastUpdate")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     LocalDate lastUpdate;
 
-    @JsonbProperty("lastCheckedForUpdate")
-    @JsonbDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+    @JsonProperty("lastCheckedForUpdate")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     LocalDate lastCheckedForUpdate;
 }
