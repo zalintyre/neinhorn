@@ -1,0 +1,118 @@
+{
+  "data": {
+    "administeredVaccinations": 3116122,
+    "vaccinated": 2212851,
+    "vaccination": {
+      "biontech": 2160072,
+      "moderna": 52779,
+      "astraZeneca": 15,
+      "janssen": 885722
+    },
+    "delta": 49890,
+    "quote": 0.026607412670196853,
+    "secondVaccination": {
+      "vaccinated": 903271,
+      "vaccination": {
+        "biontech": 903263,
+        "moderna": 8,
+        "astraZeneca": 0,
+        "janssen": 63
+      },
+      "delta": 61132,
+      "quote": 0.010860968158281503
+    },
+    "indication": {
+      "age": 0,
+      "job": 0,
+      "medical": 0,
+      "nursingHome": 0,
+      "secondVaccination": {
+        "age": 0,
+        "job": 0,
+        "medical": 0,
+        "nursingHome": 0
+      }
+    },
+    "states": {
+      "BW": {
+        "name": "Baden-Württemberg",
+        "administeredVaccinations": 365886,
+        "vaccinated": 269728,
+        "vaccination": {
+          "biontech": 262064,
+          "moderna": 7664,
+          "astraZeneca": 15,
+          "janssen": 6000
+        },
+        "delta": 9495,
+        "quote": 0.024298957316289855,
+        "secondVaccination": {
+          "vaccinated": 96158,
+          "vaccination": {
+            "biontech": 96150,
+            "moderna": 8,
+            "astraZeneca": 0,
+            "janssen": 0
+          },
+          "delta": 6537,
+          "quote": 0.008662575400476775
+        },
+        "indication": {
+          "age": 0,
+          "job": 0,
+          "medical": 0,
+          "nursingHome": 0,
+          "secondVaccination": {
+            "age": 0,
+            "job": 0,
+            "medical": 0,
+            "nursingHome": 0
+          }
+        }
+      },
+      "TH": {
+        "name": "Thüringen",
+        "administeredVaccinations": 85878,
+        "vaccinated": 65341,
+        "vaccination": {
+          "biontech": 63489,
+          "moderna": 1852,
+          "astraZeneca": 15,
+          "janssen": 2000
+        },
+        "delta": 2798,
+        "quote": 0.030627952477245007,
+        "secondVaccination": {
+          "vaccinated": 20537,
+          "vaccination": {
+            "biontech": 20537,
+            "moderna": 0,
+            "astraZeneca": 0,
+            "janssen": 0
+          },
+          "delta": 2007,
+          "quote": 0.009626517194796234
+        },
+        "indication": {
+          "age": 0,
+          "job": 0,
+          "medical": 0,
+          "nursingHome": 0,
+          "secondVaccination": {
+            "age": 0,
+            "job": 0,
+            "medical": 0,
+            "nursingHome": 0
+          }
+        }
+      }
+    }
+  },
+  "meta": {
+    "source": "Robert Koch-Institut",
+    "contact": "Marlon Lueckert (m.lueckert@me.com)",
+    "info": "https://github.com/marlon360/rki-covid-api",
+    "lastUpdate": "2021-04-27T16:52:07.000Z",
+    "lastCheckedForUpdate": "2021-04-27T18:58:00.401Z"
+  }
+}
