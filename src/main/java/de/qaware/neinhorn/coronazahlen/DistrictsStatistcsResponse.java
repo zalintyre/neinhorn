@@ -6,8 +6,9 @@ import lombok.Data;
 
 @Data
 @RegisterForReflection
-public class VaccinationsResponse {
+public class DistrictsStatistcsResponse {
 
     @JsonProperty("data")
-    VaccinationsResponseData vaccinationsResponseData;
+    DistrictsStatisticsResponseData districtsStatisticsResponseData;
+
 }

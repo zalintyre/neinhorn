@@ -15,4 +15,8 @@ public interface StatisticsClient {
     @Path("/germany")
     Uni<CountryStatisticsResponse> getStatisticsForGermany();
 
+    @GET
+    @Path("/districts")
+    Uni<DistrictsStatistcsResponse> getDistrictStatistics();
+
 }
