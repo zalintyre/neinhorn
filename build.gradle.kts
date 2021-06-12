@@ -59,7 +59,6 @@ tasks.withType<JavaCompile> {
 tasks.quarkusBuild {
     nativeArgs {
         "container-build" to true
-        "buildImage" to "quay.io/quarkus/ubi-quarkus-native-image:21.0.0-java11"
         "quarkus.native.java-home" to "/usr/lib/jvm/java-11-graalvm"
     }
 }
