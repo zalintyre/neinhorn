@@ -28,21 +28,41 @@
         <div class="px-4 pt-5 my-3 text-center">
             <h3>Aber die Pandemie ist doch so gut wie vorbei!</h3>
             <p class="lead">NEIN.</p>
-            <p>Gestern hatten wir <mark id="deltaCases"></mark> Neuinfektionen in Deutschland, was eine 7-Tages-Inzidenz von <mark id="weekIncidence"></mark> ergibt.</p>
+            <p>Gestern hatten wir
+                <mark id="deltaCases" class="spinner"></mark>
+                Neuinfektionen in Deutschland, was eine 7-Tages-Inzidenz von
+                <mark id="weekIncidence" class="spinner"></mark>
+                ergibt.
+            </p>
         </div>
 
         <div class="px-4 pt-5 my-3 text-center">
-            <h3>Aber wir sind doch alle geimpft.</h3>
+            <h3>Aber wir sind doch alle geimpft!</h3>
 
             <p class="lead">NEIN.</p>
-            <p>Erst <mark id="firstDosePercentage"></mark> der Bevölkerung haben ihre erste Impfdosis erhalten. Die zweite Impfdosis haben lediglich <mark id="secondDosePercentage"></mark> der Bevölkerung haben den vollen Immunschutz.</p>
+            <p>Erst
+                <mark id="firstDosePercentage" class="spinner"></mark>
+                der Bevölkerung haben ihre erste Impfdosis erhalten. Lediglich
+                <mark id="secondDosePercentage" class="spinner"></mark>
+                der Bevölkerung haben den vollen Immunschutz.
+            </p>
         </div>
 
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
-            <a href="https://codefoundry.de/imprint.html">Impressum</a>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
+                <div class="col">
+                    <a href="https://codefoundry.de/imprint.html">Impressum</a>
+                </div>
+                <div class="col">
+                    Powered by <a href="https://quarkus.io">Quarkus</a>
+                </div>
+                <div class="col-auto">
+                    Herzlichen Dank an <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a>!
+                </div>
+            </div>
         </div>
     </footer>
 

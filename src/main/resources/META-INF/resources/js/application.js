@@ -1,5 +1,7 @@
 const serviceUrl = '/coviddata';
 
+$('.spinner').html('<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>');
+
 $.ajax({
     url: serviceUrl,
     contentType: 'application/json',
@@ -19,4 +21,4 @@ $.ajax({
         $('#deltaCases').text(result.statisticsData.deltaCases);
         $('#weekIncidence').text(weekIncidence);
     }
-})
+});
