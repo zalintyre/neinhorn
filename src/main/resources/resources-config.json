@@ -11,6 +11,12 @@
         },
         {
             "pattern": ".*\\.jpg$"
+        },
+        {
+            "pattern": ".*\\.woff$"
+        },
+        {
+            "pattern": ".*\\.woff2$"
         }
     ]
 }
