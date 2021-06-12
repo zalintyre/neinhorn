@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="h-100 fzyisqn idc0_330" lang="de">
+<html class="h-100" lang="de">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex,nofollow" />
+    <meta name="robots" content="index,follow" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -18,38 +18,61 @@
 </head>
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
-        <div class="px-4 my-3 text-center">
-            <h1 class="fw-bold">Meet the Neinhorn!</h1>
+        <div class="mx-3 my-3 py-3 text-center">
+            <h1 class="">Meet the Neinhorn!</h1>
 
             <div class="container">
                 <img src="img/neinhorn.jpg" class="img-fluid rounded-3 shadow-lg" alt="Das Neinhorn" loading="lazy" width="700" height="500">
             </div>
         </div>
 
-        <div class="px-4 pt-5 my-3 text-center">
+        <div class="mx-3 my-3 py-3 text-center">
             <h3>Aber die Pandemie ist doch so gut wie vorbei!</h3>
-            <p class="lead">NEIN.</p>
+
+            <p class="lead">Nein.</p>
+
             <p>Gestern hatten wir
-                <mark id="deltaCases" class="spinner"></mark>
+                <span id="deltaCases" class="spinner fw-bolder"></span>
                 Neuinfektionen in Deutschland, was eine 7-Tages-Inzidenz von
-                <mark id="weekIncidence" class="spinner"></mark>
+                <span id="weekIncidence" class="spinner fw-bolder"></span>
                 ergibt.
             </p>
         </div>
 
-        <div class="px-4 pt-5 my-3 text-center">
+        <div class="mx-3 my-3 py-3 text-center">
             <h3>Aber wir sind doch alle geimpft!</h3>
 
-            <p class="lead">NEIN.</p>
+            <p class="lead">Nein.</p>
+
             <p>Erst
-                <mark id="firstDosePercentage" class="spinner"></mark>
+                <span id="firstDosePercentage" class="spinner fw-bolder"></span>
                 der Bevölkerung haben ihre erste Impfdosis erhalten. Lediglich
-                <mark id="secondDosePercentage" class="spinner"></mark>
-                der Bevölkerung haben den vollen Immunschutz.
+                <span id="secondDosePercentage" class="spinner fw-bolder"></span>
+                der Bevölkerung haben den vollen Immunschutz. Weltweit ist der Prozentsatz noch geringer<sup>1</sup>.
             </p>
         </div>
 
+        <div class="mx-3 my-3 py-3 text-center">
+            <h3>Aber mit dem Händewaschen kann ich langsam wieder aufhören, oder?</h3>
+
+            <p class="lead">NEIN!</p>
+        </div>
     </main>
+
+    <div class="container my-3 py-3">
+        <div class="card">
+            <div class="card-header">Quellen</div>
+            <div class="card-body">
+                <p>
+                    <sup>1</sup>
+                    <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&pickerSort=desc&pickerMetric=total_vaccinations&Metric=People+vaccinated&Interval=Cumulative&Relative+to+Population=true&Align+outbreaks=false&country=OWID_WRL~Europe"
+                       target="_blank">
+                        Our World in Data - Impfquoten weltweit
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
@@ -58,9 +81,11 @@
                     <a href="https://codefoundry.de/imprint.html">Impressum</a>
                 </div>
                 <div class="col">
+                    <i class="bi bi-lightning-fill"></i>
                     Powered by <a href="https://quarkus.io">Quarkus</a>
                 </div>
                 <div class="col-auto">
+                    <i class="bi bi-bar-chart-line-fill"></i>
                     Herzlichen Dank an <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a>!
                 </div>
             </div>
