@@ -42,22 +42,11 @@ public class CovidDataRoutes {
         Uni<CountryStatisticsResponse> germanStatisticsResponse = statisticsClient.getStatisticsForGermany();
         Uni<DistrictsStatistcsResponse> districtsStatisticsResponse = statisticsClient.getDistrictStatistics();
 
-        Uni<VaccinationsData> vaccinationsData = vaccinationsResponse
-            .map(VaccinationsResponse::getVaccinationsResponseData)
-            .map(VaccinationsData::of);
-
-        Uni<StatisticsData> statisticsData = germanStatisticsResponse
-            .map(StatisticsData::of);
-
         String countyCode = rc.getParam("county").orElse(DEFAULT_COUNTY_CODE);
 
-        Uni<Map<String, DistrictStatistics>> districtStatisticsMap = districtsStatisticsResponse
-            .map(DistrictsStatistcsResponse::getDistrictsStatisticsResponseData)
-            .map(DistrictsStatisticsResponseData::getDistrictStatisticsMap);
-
-        Uni<DistrictStatisticsData> districtStatisticsData = districtStatisticsMap
-            .map(map -> map.get(countyCode))
-            .map(DistrictStatisticsData::of);
+        Uni<VaccinationsData> vaccinationsData = getVaccinationsData(vaccinationsResponse);
+        Uni<StatisticsData> statisticsData = getStatisticsData(germanStatisticsResponse);
+        Uni<DistrictStatisticsData> districtStatisticsData = getDistrictStatisticsData(districtsStatisticsResponse, countyCode);
 
         return Uni.combine()
             .all()
@@ -69,4 +58,22 @@ public class CovidDataRoutes {
                 .build());
     }
 
+    private Uni<VaccinationsData> getVaccinationsData(Uni<VaccinationsResponse> vaccinationsResponse) {
+        return vaccinationsResponse
+            .map(VaccinationsResponse::getVaccinationsResponseData)
+            .map(VaccinationsData::of);
+    }
+
+    private Uni<StatisticsData> getStatisticsData(Uni<CountryStatisticsResponse> germanStatisticsResponse) {
+        return germanStatisticsResponse
+            .map(StatisticsData::of);
+    }
+
+    private Uni<DistrictStatisticsData> getDistrictStatisticsData(Uni<DistrictsStatistcsResponse> districtsStatisticsResponse, String countyCode) {
+        return districtsStatisticsResponse
+            .map(DistrictsStatistcsResponse::getDistrictsStatisticsResponseData)
+            .map(DistrictsStatisticsResponseData::getDistrictStatisticsMap)
+            .map(map -> map.get(countyCode))
+            .map(DistrictStatisticsData::of);
+    }
 }
