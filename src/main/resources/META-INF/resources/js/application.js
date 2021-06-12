@@ -2,19 +2,24 @@ const serviceUrl = '/coviddata';
 
 $('.spinner').html('<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Lade Covid-Statistiken...</span></div>');
 
+function formatFloat(float) {
+    console.log(float);
+    return Number(float).toFixed(2).replace('.', ',');
+}
+
 $.ajax({
     url: serviceUrl,
     contentType: 'application/json',
     dataType: 'json',
 
     success: function (result) {
-        const firstDoseQuote = result.vaccinationsData.firstDoseQuote;
-        const firstDosePercentage = (firstDoseQuote * 100) + '%';
+        const firstDoseQuote = formatFloat(result.vaccinationsData.firstDoseQuote * 100);
+        const firstDosePercentage = firstDoseQuote + '%';
 
-        const secondDoseQuote = result.vaccinationsData.secondDoseQuote;
-        const secondDosePercentage = (secondDoseQuote * 100) + '%';
+        const secondDoseQuote = formatFloat(result.vaccinationsData.secondDoseQuote * 100);
+        const secondDosePercentage = secondDoseQuote + '%';
 
-        const weekIncidence = Number(result.statisticsData.currentWeekIncidence).toFixed(2).replace('.', ',');
+        const weekIncidence = formatFloat(result.statisticsData.currentWeekIncidence);
 
         $('#firstDosePercentage').text(firstDosePercentage);
         $('#secondDosePercentage').text(secondDosePercentage);
@@ -22,7 +27,7 @@ $.ajax({
         $('#weekIncidence').text(weekIncidence);
     },
 
-    error: function(result) {
-        $('.spinner').html('<i class="bi bi-exclamation-triangle"><span class="visually-hidden">Beim Abruf von Covid-Statistiken ist ein Fehler aufgetreten.</span></i>');
+    error: function (result) {
+        $('.spinner').html('<i class="bi bi-exclamation-triangle-fill"><span class="visually-hidden">Beim Abruf von Covid-Statistiken ist ein Fehler aufgetreten.</span></i>');
     }
 });
