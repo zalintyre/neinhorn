@@ -11,13 +11,15 @@ import java.math.BigDecimal;
 public class VaccinationsData {
     long administeredVaccinations;
     long vaccinated;
-    BigDecimal quote;
+    BigDecimal firstDoseQuote;
+    BigDecimal secondDoseQuote;
 
     public static VaccinationsData of(VaccinationsResponseData vaccinationsResponseData) {
         return VaccinationsData.builder()
-                .administeredVaccinations(vaccinationsResponseData.getAdministeredVaccinations())
-                .vaccinated(vaccinationsResponseData.getVaccinated())
-                .quote(vaccinationsResponseData.getQuote())
-                .build();
+            .administeredVaccinations(vaccinationsResponseData.getAdministeredVaccinations())
+            .vaccinated(vaccinationsResponseData.getVaccinated())
+            .firstDoseQuote(vaccinationsResponseData.getQuote())
+            .secondDoseQuote(vaccinationsResponseData.getSecondVaccination().getQuote())
+            .build();
     }
 }

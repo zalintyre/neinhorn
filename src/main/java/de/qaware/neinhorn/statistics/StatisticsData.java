@@ -10,12 +10,14 @@ import java.math.BigDecimal;
 @Builder
 public class StatisticsData {
     BigDecimal currentRValue;
-    BigDecimal currentIncidence;
+    BigDecimal currentWeekIncidence;
+    long deltaCases;
 
     public static StatisticsData of(CountryStatisticsResponse countryStatisticsResponse) {
         return StatisticsData.builder()
-                .currentRValue(countryStatisticsResponse.getR().getValue())
-                .currentIncidence(countryStatisticsResponse.getWeekIncidence())
-                .build();
+            .currentRValue(countryStatisticsResponse.getR().getValue())
+            .currentWeekIncidence(countryStatisticsResponse.getWeekIncidence())
+            .deltaCases(countryStatisticsResponse.getDelta().getCases())
+            .build();
     }
 }
