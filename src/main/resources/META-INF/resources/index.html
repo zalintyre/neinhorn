@@ -14,15 +14,15 @@
     <script type="application/javascript" src="js/jquery.min.js"></script>
     <script type="application/javascript" src="js/application.js" defer></script>
 
-    <title>Meet the Neinhorn!</title>
+    <title>Meet the NEINhorn!</title>
 </head>
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
         <div class="mx-3 my-3 py-3 text-center">
-            <h1 class="">Meet the Neinhorn!</h1>
+            <h1 class="">Meet the NEINhorn!</h1>
 
             <div class="container">
-                <img src="img/neinhorn.jpg" class="img-fluid rounded-3 shadow-lg" alt="Das Neinhorn" loading="lazy" width="700" height="500">
+                <img src="img/neinhorn.png" class="img-fluid rounded-3 shadow-lg" alt="Das Neinhorn">
             </div>
         </div>
 
@@ -63,34 +63,37 @@
 
             <p class="lead">NEIN!</p>
         </div>
-    </main>
 
-    <div class="container my-3 py-3">
-        <div class="card">
-            <div class="card-header">Quellen</div>
-            <div class="card-body">
-                <p>
-                    <sup>1</sup>
-                    <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&pickerSort=desc&pickerMetric=total_vaccinations&Metric=People+vaccinated&Interval=Cumulative&Relative+to+Population=true&Align+outbreaks=false&country=OWID_WRL~Europe"
-                       target="_blank">
-                        Our World in Data - Impfquoten weltweit
-                    </a>
-                </p>
+        <div class="container my-3 py-3">
+            <div class="card">
+                <div class="card-header">Quellen</div>
+                <div class="card-body">
+                    <p>
+                        <sup>1</sup>
+                        <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&pickerSort=desc&pickerMetric=total_vaccinations&Metric=People+vaccinated&Interval=Cumulative&Relative+to+Population=true&Align+outbreaks=false&country=OWID_WRL~Europe"
+                           target="_blank">
+                            Our World in Data - Impfquoten weltweit
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
-                <div class="col">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-md-12">
+                <div class="col-md-2">
                     <a href="https://codefoundry.de/imprint.html">Impressum</a>
                 </div>
-                <div class="col">
+                <div class="col-md-2">
                     <i class="bi bi-lightning-fill"></i>
                     Powered by <a href="https://quarkus.io">Quarkus</a>
                 </div>
-                <div class="col-auto">
+                <div class="col-md-5">
+                    Bild veröffentlicht von <a href="https://www.deviantart.com/takiroryo/art/My-Fursona-as-a-Pony-821023429">TakiroRyo</a> - Licensed under Creative Commons CC BY-NC-ND 4.0
+                </div>
+                <div class="col-md-3">
                     <i class="bi bi-bar-chart-line-fill"></i>
                     Herzlichen Dank an <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a>!
                 </div>
