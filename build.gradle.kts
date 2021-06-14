@@ -20,6 +20,7 @@ dependencies {
     implementation("io.quarkus:quarkus-rest-client-reactive-jackson")
 
     implementation("io.quarkus:quarkus-arc")
+    implementation("io.quarkus:quarkus-cache")
     implementation("io.quarkus:quarkus-vertx-web")
 
     // Commons

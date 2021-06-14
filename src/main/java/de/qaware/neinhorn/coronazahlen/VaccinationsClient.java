@@ -1,5 +1,6 @@
 package de.qaware.neinhorn.coronazahlen;
 
+import io.quarkus.cache.CacheResult;
 import io.smallrye.mutiny.Uni;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
@@ -16,5 +17,6 @@ import javax.ws.rs.core.MediaType;
 public interface VaccinationsClient {
 
     @GET
+    @CacheResult(cacheName = "vaccinations-cache")
     Uni<VaccinationsResponse> getVaccinations();
 }
