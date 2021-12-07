@@ -10,7 +10,7 @@
             "pattern": ".*\\.js$"
         },
         {
-            "pattern": ".*\\.jpg$"
+            "pattern": ".*\\.png"
         },
         {
             "pattern": ".*\\.woff$"
