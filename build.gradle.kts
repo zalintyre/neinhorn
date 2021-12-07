@@ -73,3 +73,11 @@ val buildDockerContext by tasks.registering(Sync::class) {
 tasks.assemble {
     dependsOn(buildDockerContext)
 }
+
+val stage by tasks.registering() {
+
+}
+
+stage {
+    dependsOn(tasks.build)
+}
