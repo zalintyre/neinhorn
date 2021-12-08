@@ -8,6 +8,12 @@ if (county) {
 
 $('.spinner').html('<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Lade Covid-Statistiken...</span></div>');
 
+/*** Imprint ***/
+console.log(document.domain);
+if (document.domain !== 'neinhorn.codefoundry.de') {
+    $('#imprint').remove();
+}
+
 /*** Functions ***/
 
 function formatFloat(float) {
