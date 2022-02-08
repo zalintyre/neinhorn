@@ -24,7 +24,7 @@ dependencies {
     implementation("io.quarkus:quarkus-vertx-web")
 
     // Commons
-    implementation("commons-io:commons-io:2.9.0")
+    implementation("commons-io:commons-io:2.11.0")
 
     // Logging
     implementation("org.slf4j:slf4j-api:1.7.30")
