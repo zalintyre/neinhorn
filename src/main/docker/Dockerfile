@@ -1,4 +1,4 @@
-FROM archlinux:latest
+FROM ubuntu:20.04
 
 WORKDIR /work
 
