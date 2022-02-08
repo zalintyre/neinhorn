@@ -16,7 +16,7 @@ if (document.domain !== 'neinhorn.codefoundry.de') {
 /*** Functions ***/
 
 function formatFloat(float) {
-    return Number(float).toFixed(2).replace('.', ',');
+    return Number(float).toFixed(1).replace('.', ',');
 }
 
 function getUrlParameter(sParam) {
@@ -47,22 +47,21 @@ $.ajax({
         const secondDoseQuote = formatFloat(result.vaccinationsData.secondDoseQuote * 100);
         const secondDosePercentage = secondDoseQuote + '%';
 
-        console.log(result.vaccinationsData);
         const boosterDoseQuote = formatFloat(result.vaccinationsData.boosterDoseQuote * 100);
         const boosterDosePercentage = boosterDoseQuote + '%';
 
-        const weekIncidence = formatFloat(result.statisticsData.currentWeekIncidence);
-        const districtWeekIncidence = formatFloat(result.districtStatisticsData.currentWeekIncidence);
+        const weekIncidence = Math.round(result.statisticsData.currentWeekIncidence);
+        const districtWeekIncidence = Math.round(result.districtStatisticsData.currentWeekIncidence);
 
         $('#firstDosePercentage').text(firstDosePercentage);
         $('#secondDosePercentage').text(secondDosePercentage);
         $('#boosterDosePercentage').text(boosterDosePercentage);
-        $('#deltaCases').text(result.statisticsData.deltaCases);
-        $('#weekIncidence').text(weekIncidence);
+        $('#deltaCases').text(result.statisticsData.deltaCases.toLocaleString());
+        $('#weekIncidence').text(weekIncidence.toLocaleString());
         $('#districtName').text(result.districtStatisticsData.name);
         $('#districtCounty').text(result.districtStatisticsData.county);
-        $('#districtDeltaCases').text(result.districtStatisticsData.deltaCases);
-        $('#districtWeekIncidence').text(districtWeekIncidence);
+        $('#districtDeltaCases').text(result.districtStatisticsData.deltaCases.toLocaleString());
+        $('#districtWeekIncidence').text(districtWeekIncidence.toLocaleString());
     },
 
     error: function (result) {
