@@ -1,7 +1,6 @@
 package de.qaware.neinhorn.rest;
 
 import de.qaware.neinhorn.coronazahlen.CountryStatisticsResponse;
-import de.qaware.neinhorn.coronazahlen.DistrictStatistics;
 import de.qaware.neinhorn.coronazahlen.DistrictsStatistcsResponse;
 import de.qaware.neinhorn.coronazahlen.DistrictsStatisticsResponseData;
 import de.qaware.neinhorn.coronazahlen.StatisticsClient;
@@ -19,7 +18,6 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import java.util.Map;
 
 @Slf4j
 @ApplicationScoped

@@ -1,7 +1,6 @@
 package de.qaware.neinhorn.statistics;
 
 import de.qaware.neinhorn.coronazahlen.CountryStatisticsResponse;
-import de.qaware.neinhorn.coronazahlen.DistrictsStatisticsResponseData;
 import lombok.Builder;
 import lombok.Value;
 
