@@ -27,7 +27,7 @@ dependencies {
     implementation("commons-io:commons-io:2.11.0")
 
     // Logging
-    implementation("org.slf4j:slf4j-api:1.7.30")
+    implementation("org.slf4j:slf4j-api:1.7.36")
 
     // Lombok
     compileOnly("org.projectlombok:lombok:1.18.20")
