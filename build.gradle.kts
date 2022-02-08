@@ -30,8 +30,8 @@ dependencies {
     implementation("org.slf4j:slf4j-api:1.7.36")
 
     // Lombok
-    compileOnly("org.projectlombok:lombok:1.18.20")
-    annotationProcessor("org.projectlombok:lombok:1.18.20")
+    compileOnly("org.projectlombok:lombok:1.18.22")
+    annotationProcessor("org.projectlombok:lombok:1.18.22")
 
     // Tests
     testImplementation("org.codehaus.groovy:groovy-all:3.0.8")
