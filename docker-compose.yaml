@@ -1,9 +1,13 @@
-version: "3.9"
+version: "3.7"
 services:
 
   neinhorn:
-    build: build/docker
-    image: zalintyre/neinhorn
+    build:
+      context: build/docker
+      dockerfile: Dockerfile
+      args:
+        - NEINHORN_VERSION=${NEINHORN_VERSION}
+    image: zalintyre/neinhorn:${NEINHORN_VERSION}
     ports:
       - "8080:8080"
     networks:

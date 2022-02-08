@@ -45,7 +45,7 @@ dependencies {
 }
 
 group = "io.qaware"
-version = "1.0.0-SNAPSHOT"
+version = "1.1.0"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
