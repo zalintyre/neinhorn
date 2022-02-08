@@ -13,6 +13,7 @@ public class VaccinationsData {
     long vaccinated;
     BigDecimal firstDoseQuote;
     BigDecimal secondDoseQuote;
+    BigDecimal boosterDoseQuote;
 
     public static VaccinationsData of(VaccinationsResponseData vaccinationsResponseData) {
         return VaccinationsData.builder()
@@ -20,6 +21,7 @@ public class VaccinationsData {
             .vaccinated(vaccinationsResponseData.getVaccinated())
             .firstDoseQuote(vaccinationsResponseData.getQuote())
             .secondDoseQuote(vaccinationsResponseData.getSecondVaccination().getQuote())
+            .boosterDoseQuote(vaccinationsResponseData.getBoosterVaccination().getQuote())
             .build();
     }
 }

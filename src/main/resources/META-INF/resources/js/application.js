@@ -9,7 +9,6 @@ if (county) {
 $('.spinner').html('<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Lade Covid-Statistiken...</span></div>');
 
 /*** Imprint ***/
-console.log(document.domain);
 if (document.domain !== 'neinhorn.codefoundry.de') {
     $('#imprint').remove();
 }
@@ -17,7 +16,6 @@ if (document.domain !== 'neinhorn.codefoundry.de') {
 /*** Functions ***/
 
 function formatFloat(float) {
-    console.log(float);
     return Number(float).toFixed(2).replace('.', ',');
 }
 
@@ -49,11 +47,16 @@ $.ajax({
         const secondDoseQuote = formatFloat(result.vaccinationsData.secondDoseQuote * 100);
         const secondDosePercentage = secondDoseQuote + '%';
 
+        console.log(result.vaccinationsData);
+        const boosterDoseQuote = formatFloat(result.vaccinationsData.boosterDoseQuote * 100);
+        const boosterDosePercentage = boosterDoseQuote + '%';
+
         const weekIncidence = formatFloat(result.statisticsData.currentWeekIncidence);
         const districtWeekIncidence = formatFloat(result.districtStatisticsData.currentWeekIncidence);
 
         $('#firstDosePercentage').text(firstDosePercentage);
         $('#secondDosePercentage').text(secondDosePercentage);
+        $('#boosterDosePercentage').text(boosterDosePercentage);
         $('#deltaCases').text(result.statisticsData.deltaCases);
         $('#weekIncidence').text(weekIncidence);
         $('#districtName').text(result.districtStatisticsData.name);
