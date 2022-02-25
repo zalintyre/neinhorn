@@ -21,6 +21,7 @@ dependencies {
 
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-cache")
+    implementation("io.quarkus:quarkus-micrometer-registry-prometheus")
     implementation("io.quarkus:quarkus-vertx-web")
 
     // Commons
